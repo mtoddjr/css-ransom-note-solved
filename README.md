@@ -9,7 +9,7 @@ Welcome to the intriguing world of typography and design with CSS! In this assig
 Best of luck on this typographic adventure!
 
 To preview the app, simply click the "Go Live" button found in the VSCODE status bar. This will open your webpage in your browser.
-
+  
 If you are not using VSCode you can install and run the "live-server" npm package following the list of commands:
 
 - Use `npm i live-server` to install the live-server package
