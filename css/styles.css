@@ -51,6 +51,32 @@ body {
   transition: all 0.8s ease-in-out;
 }
 
+/* My additional selectors are below */
+div span:nth-child(3n + 4) {
+  font-size: 28px;
+  color: black;
+  font-weight: normal;
+  text-decoration: line-through;
+  text-decoration-color: greenyellow;
+}
+
+.word span:first-child {
+  font-size: 60px;
+  color: rgb(10 31 29);
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: hotpink;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+/* My additional selectors are above */
+
 /* Sample CSS for the WHY word */
 
 .whyWLetter {
