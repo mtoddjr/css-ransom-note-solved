@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap'); /*Piazzolla*/
+@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap'); /*Ceviche One*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap'); /*Raleway Dots*/
 
 * {
   padding: 0;
@@ -52,6 +52,34 @@ body {
 }
 
 /* My additional selectors are below */
+.vowel {
+  font-family: "Piazzolla";
+  font-size: 14px;
+  color: hsl(45 24 188);
+  font-weight: 400;
+  text-decoration: overline;
+  text-decoration-color: rgb(188 188 29);
+}
+.consonant {
+  font-family: "Ceviche One";
+  font-size: 30px;
+  color: rgb(205 42 77);
+  font-weight: normal;
+  text-decoration: none;
+  text-decoration-color: rgb(188 188 29);
+}
+
+.punctuation {
+  font-family: "Raleway Dots";
+}
+
+/* div:has(> span:contains("h")):nth-child(2),
+div:has(> span:contains("l")):nth-child(4),
+div:has(> span:contains("n")):nth-child(6) {
+  color: red;
+  font-size: 80px;;
+} */
+
 div span:nth-child(3n + 4) {
   font-size: 28px;
   color: black;
