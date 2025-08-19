@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Piazzolla&display=swap'); /*Piazzolla*/
-@import url('https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap'); /*Ceviche One*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap'); /*Raleway Dots*/
-@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap'); /*Ribeye Marrow*/
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap'); /*Rubik Iso*/
-@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap'); /*Molle*/
+@import url("https://fonts.googleapis.com/css2?family=Piazzolla&display=swap"); /*Piazzolla*/
+@import url("https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap"); /*Ceviche One*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap"); /*Raleway Dots*/
+@import url("https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap"); /*Ribeye Marrow*/
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap"); /*Rubik Iso*/
+@import url("https://fonts.googleapis.com/css2?family=Molle&display=swap"); /*Molle*/
 
 * {
   padding: 0;
@@ -55,18 +55,25 @@ body {
 }
 
 /* My additional selectors are below */
-/* .vowel {
-  font-family: 'Piazzolla', sans-serif;
+/* 
+  For the ransom note, I decided to select and style elements using patterns rather than adding each letter to a specific class. You will find some basic classes such as .vowel, .consonant, and .punctuation. Any further than that, I used patterned selectors for the majority of the characters. Lastly, for a select few characters, I used their default classes that were forked from the devslopes files and combined them as neccessary.
+*/
+.vowel,
+.consonant,
+.gardeningNTwoLetter {
   font-size: 64px;
+}
+
+.vowel {
+  font-family: "Piazzolla", sans-serif;
   color: #44ac03;
   font-weight: 400;
   text-decoration: line-through;
   text-decoration-color: rgb(188 188 29);
 }
 .consonant {
-  font-family: 'Ceviche One', sans-serif;
-  font-size: 30px;
-  color: rgb(205 42 77);
+  font-family: "Ceviche One", sans-serif;
+  color: #bb13ac;
   font-weight: normal;
   text-decoration: none;
   font-style: italic;
@@ -74,298 +81,87 @@ body {
 }
 
 .punctuation {
-  font-family: 'Raleway Dots', sans-serif;
-} */
+  font-family: "Raleway Dots", sans-serif;
+  color: blue;
+  font-size: 120px;
+  font-weight: 700;
+}
 
-span:nth-child(3n + 4) {
-  font-family: 'Rubik Iso', sans-serif;
-  font-size: 44px;
-  color: black;
-  font-weight: normal;
+span:nth-child(3n + 4):not(.punctuation),
+.word:nth-child(2n) span:first-child:not(.punctuation) {
+  font-size: 30px;
   text-decoration: overline;
+}
+
+span:nth-child(3n + 4):not(.punctuation) {
+  font-family: "Rubik Iso", sans-serif;
+  color: rgb(01 63 48);
+  font-weight: normal;
   text-decoration-color: greenyellow;
 }
 
-.word:nth-child(2n) span:first-child {
-  font-family: 'Ribeye Marrow', sans-serif;
-  font-size: 60px;
+.word:nth-child(2n) span:first-child:not(.punctuation) {
+  font-family: "Ribeye Marrow", sans-serif;
   color: rgb(84 36 10);
   font-weight: bold;
-  text-decoration: underline;
   text-decoration-color: hotpink;
 }
 
-.word:nth-child(2n + 1) span:first-child {
-  font-family: 'Molle', cursive;
-  font-size: 30px;
-  color: rgb(01 63 48);
-  text-decoration: overline;
+.consonant:nth-child(even),
+.word:nth-child(2n + 1) span:first-child:not(.punctuation) {
+  font-family: "Molle", cursive;
+  font-size: 50px;
+  text-decoration: underline;
+  text-transform: capitalize;
+}
+
+.consonant:nth-child(even) {
+  color: teal;
+  text-decoration-style: double;
+  text-decoration-color: tan;
+}
+
+.word:nth-child(2n + 1) span:first-child:not(.punctuation) {
+  color: rgb(124, 131, 129);
   text-decoration-color: slategray;
 }
-
-/* .uppercase {
-  text-transform: uppercase;
-} */
-
-/* .lowercase {
-  text-transform: lowercase;
-} */
-
-/* .uppercase:nth-child(even) {
-  font-family: 'Molle', sans-serif;
-  text-decoration: underline dotted 4px;
-  text-decoration-color: saddlebrown;
-} */
 /* My additional selectors are above */
+/* Orginal classes are below */
 
-/* Sample CSS for the WHY word */
-
-.whyWLetter {
-  font-size: 72px;
-  font-weight: bold;
-  color: aqua;
-  text-decoration: underline;
-  text-transform: uppercase;
-  font-family: 'Piazolla', sans-serif;
-}
-
-.whyHLetter {
-  font-size: 30px;
-  font-weight: bold;
-  color: darkgoldenrod;
-  text-decoration: overline;
-  text-transform: lowercase;
-  font-family: 'Ceviche One', sans-serif;
-}
-
-.whyYLetter {
-  font-size: 60px;
-  font-weight: normal;
-  color: coral;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: 'Raleway Dots', sans-serif;
-}
-
-/* DID word */
-
-.didDLetter {
-}
-
-.didILetter {
-}
-
-.didDTwoLetter {
-}
-
-/* THE word */
-
-.theTLetter {
-}
-
-.theHLetter {
-}
-
-.theELetter {
-}
-
-/* FRONT-END word */
-
-.frontendFLetter {
-}
-
-.frontendRLetter {
-}
-
-.frontendOLetter {
-}
-
-.frontendNLetter {
-}
-
-.frontendTLetter {
-}
-
-.frontendELetter {
-}
-
-.frontendNTwoLetter {
-}
-
-.frontendDLetter {
-}
-
-/* DEVELOPER word */
-
-.developerDLetter {
-}
-.developerELetter {
-}
-.developerVLetter {
-}
-.developerETwoLetter {
-}
-.developerLLetter {
-}
-.developerOLetter {
-}
-.developerPLetter {
-}
-.developerEThreeLetter {
-}
-.developerRLetter {
-}
-
-/* TAKE word */
-
-.takeTLetter {
-}
-.takeALetter {
-}
-.takeKLetter {
-}
-.takeELetter {
-}
-
-/* UP word */
-
-.upULetter {
-}
-.upPLetter {
-}
-
-/* GARDENING word */
-
-.gardeningGLetter {
-}
-.gardeningALetter {
-}
-.gardeningRLetter {
-}
-.gardeningDLetter {
-}
-.gardeningELetter {
-}
-.gardeningNLetter {
-}
-.gardeningILetter {
-}
 .gardeningNTwoLetter {
-}
-.gardeningGTwoLetter {
-}
-
-/* BECAUSE word */
-
-.becauseBLetter {
-}
-.becauseELetter {
-}
-.becauseCLetter {
-}
-.becauseALetter {
-}
-.becauseULetter {
-}
-.becauseSLetter {
-}
-.becauseETwoLetter {
+  font-family: 'Molle', cursive;
+  color: #123456;
+  text-transform: lowercase;
+  text-shadow: 15px -15px 3px #654321;
 }
 
-/* THEY word */
-
-.theyTLetter {
-}
-.theyHLetter {
-}
-.theyELetter {
-}
-.theyYLetter {
-}
-
-/* WANTED word */
-
-.wantedWLetter {
-}
-.wantedALetter {
-}
-.wantedNLetter {
-}
-.wantedTLetter {
-}
-.wantedELetter {
-}
-.wantedDLetter {
-}
-
-/* TO word */
-
-.toTLetter {
-}
-.toOLetter {
-}
-
-/* IMPROVE word */
-
-.improveILetter {
-}
-.improveMLetter {
-}
-.improvePLetter {
-}
-.improveRLetter {
-}
-.improveOLetter {
-}
-.improveVLetter {
-}
-.improveELetter {
-}
-
-/* THEIR word */
-
-.theirTLetter {
-}
-.theirHLetter {
-}
-.theirELetter {
-}
-.theirILetter {
-}
+.takeKLetter,
+.becauseCLetter,
+.wantedNLetter,
 .theirRLetter {
+  color: yellowgreen;
+  text-shadow: 8px 8px 5px blueviolet;
 }
 
-/* ROOT word */
-
-.rootRLetter {
-}
-.rootOLetter {
-}
-.rootOTwoLetter {
-}
-.rootTLetter {
+.takeKLetter {
+  font-size: 116px;
+  text-decoration: overline dashed;
 }
 
-/* SKILLS word */
-
-.skillsSLetter {
-}
-.skillsKLetter {
-}
-.skillsILetter {
-}
-.skillsLLetter {
-}
-.skillsLTwoLetter {
-}
-.skillsSTwoLetter {
+.becauseCLetter {
+  font-size: 132px;
+  text-decoration: underline dotted;
 }
 
-/* SYMBOLS */
+.wantedNLetter {
+  font-size: 148px;
+  text-decoration: line-through double;
+  text-decoration-thickness: 4px;
+  text-decoration-color: blueviolet;
 
-.hyphen {
 }
-.exclamation-mark {
-}
-.question-mark {
+
+.theirRLetter {
+  font-size: 164px;
+  text-decoration: none;
 }
